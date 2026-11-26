@@ -1,0 +1,14 @@
+flowchart TB
+    P["Untrusted public client"]
+    subgraph EDGE["Public VPS boundary"]
+        A["Apache ingress"]
+        W1["WireGuard peer"]
+    end
+    subgraph HOME["Home Ubuntu boundary"]
+        H["Proxy handoff boundary"]
+        W2["WireGuard peer"]
+    end
+    P -->|public traffic| A
+    A -->|selected forwarding| H
+    W1 <-.->|encrypted peer link| W2
+    H --- X["Workload and admin exposure unverified"]

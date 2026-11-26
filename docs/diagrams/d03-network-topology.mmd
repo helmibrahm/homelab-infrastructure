@@ -1,0 +1,13 @@
+flowchart TB
+    C["Internet client"]
+    subgraph CLOUD["DigitalOcean VPS"]
+        A["Apache public edge"]
+        W1["VPS WireGuard peer"]
+    end
+    subgraph HOME["Home behind ISP CGNAT"]
+        H["Ubuntu upstream boundary"]
+        W2["VM WireGuard peer"]
+    end
+    C -->|public IPv4| A
+    A -->|host-level proxy| H
+    W1 <-.->|encrypted peering| W2

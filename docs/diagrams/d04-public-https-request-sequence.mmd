@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant C as Public client
+    participant E as Public edge / Apache
+    participant H as Home VM boundary
+    Note over C,E: Name resolution assumed
+    C->>E: Attempt HTTPS over public IPv4
+    Note over E: TLS termination unverified
+    E->>H: Forward a matching request
+    Note over E,H: Upstream transport unverified
+    H-->>E: Return upstream response
+    E-->>C: Return client response

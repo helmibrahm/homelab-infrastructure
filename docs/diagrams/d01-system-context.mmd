@@ -1,0 +1,4 @@
+flowchart TB
+    C["Internet client"] -->|public entry| S["Hybrid homelab"]
+    O["Operator"] -->|maintains both sites| S
+    I["Residential ISP"] ---|CGNAT constrains home ingress| S

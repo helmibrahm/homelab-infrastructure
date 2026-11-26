@@ -1,0 +1,15 @@
+flowchart LR
+    E["Existing: Public VPS"]
+    H["Existing: Home workload VM"]
+    C["Ingress checks"]
+    B["Encrypted off-host backup"]
+    R["Isolated restore target"]
+    D["Versioned deployment definitions"]
+    E -.-|validate approved paths| C
+    H -.->|copy selected state| B
+    B -.->|prove recovery| R
+    D -.->|test reconstruction| R
+    classDef existing fill:#e0f2fe,stroke:#0369a1,color:#0c4a6e;
+    classDef proposed fill:#ecfdf5,stroke:#047857,stroke-dasharray:4 3,color:#064e3b;
+    class E,H existing;
+    class C,B,R,D proposed;

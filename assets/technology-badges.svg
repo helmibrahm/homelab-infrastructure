@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="587" height="27" viewBox="0 0 587 27" role="img" aria-labelledby="badge-title">
+<title id="badge-title">DigitalOcean, WireGuard, Apache, Hyper-V, Ubuntu and Docker Compose</title>
+<g font-family="system-ui, sans-serif" font-size="12" font-weight="650" text-anchor="middle" fill="#fff">
+  <rect x="0" y="1" width="105" height="25" rx="5" fill="#1e40af"/><text x="52.5" y="18">DigitalOcean</text>
+  <rect x="111" y="1" width="96" height="25" rx="5" fill="#155e75"/><text x="159" y="18">WireGuard</text>
+  <rect x="213" y="1" width="72" height="25" rx="5" fill="#9f1239"/><text x="249" y="18">Apache</text>
+  <rect x="291" y="1" width="75" height="25" rx="5" fill="#4338ca"/><text x="328.5" y="18">Hyper-V</text>
+  <rect x="372" y="1" width="75" height="25" rx="5" fill="#9a3412"/><text x="409.5" y="18">Ubuntu</text>
+  <rect x="453" y="1" width="134" height="25" rx="5" fill="#065f46"/><text x="520" y="18">Docker Compose</text>
+</g>
+</svg>

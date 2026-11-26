@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="292" viewBox="0 0 780 292" role="img" aria-labelledby="title description">
+  <title id="title">Hybrid infrastructure: public ingress and home compute</title>
+  <desc id="description">A public client reaches Apache on a DigitalOcean VPS. Apache has a host-level proxy relationship with the home Ubuntu VM. A separate dashed line shows WireGuard peering. Docker Compose workloads run in the VM; no individual public route is shown.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path fill="#cbd5e1" d="M0 0L10 5L0 10z"/></marker></defs>
+  <rect width="780" height="292" rx="14" fill="#0f172a"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <rect x="16" y="83" width="126" height="68" rx="10" fill="#1e293b" stroke="#94a3b8"/>
+    <text x="79" y="112" fill="#f8fafc" font-size="15" font-weight="700">Internet client</text>
+    <text x="79" y="134" fill="#cbd5e1" font-size="13">Public IPv4</text>
+    <rect x="182" y="22" width="190" height="221" rx="12" fill="#422a0b" stroke="#fbbf24"/>
+    <rect x="504" y="22" width="260" height="221" rx="12" fill="#07392e" stroke="#34d399"/>
+    <text x="277" y="50" fill="#fde68a" font-size="17" font-weight="700">DigitalOcean VPS</text>
+    <text x="634" y="50" fill="#a7f3d0" font-size="17" font-weight="700">Home behind CGNAT</text>
+    <text x="277" y="71" fill="#fef3c7" font-size="13">Cloud gateway</text>
+    <text x="634" y="71" fill="#d1fae5" font-size="13">Windows 11 Pro / Hyper-V</text>
+    <rect x="198" y="83" width="158" height="68" rx="8" fill="#1e293b" stroke="#fbbf24"/>
+    <rect x="520" y="83" width="228" height="68" rx="8" fill="#1e293b" stroke="#34d399"/>
+    <text x="277" y="112" fill="#f8fafc" font-size="16" font-weight="700">Apache</text>
+    <text x="277" y="134" fill="#e2e8f0" font-size="13">Reverse proxy</text>
+    <text x="634" y="112" fill="#f8fafc" font-size="16" font-weight="700">Ubuntu VM boundary</text>
+    <text x="634" y="134" fill="#e2e8f0" font-size="13">Docker Compose workloads</text>
+    <path d="M142 117H196" fill="none" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M356 117H518" fill="none" stroke="#cbd5e1" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="438" y="106" fill="#e2e8f0" font-size="12">Host-level proxy</text>
+    <rect x="198" y="177" width="158" height="42" rx="8" fill="#1e293b" stroke="#67e8f9"/>
+    <rect x="520" y="177" width="228" height="42" rx="8" fill="#1e293b" stroke="#67e8f9"/>
+    <text x="277" y="203" fill="#cffafe" font-size="14">WireGuard peer</text>
+    <text x="634" y="203" fill="#cffafe" font-size="14">WireGuard peer (Ubuntu)</text>
+    <path d="M358 197H518" fill="none" stroke="#67e8f9" stroke-width="2" stroke-dasharray="5 4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <text x="438" y="186" fill="#cffafe" font-size="12">Encrypted link</text>
+    <text x="390" y="272" fill="#cbd5e1" font-size="14">Solid: public ingress and proxy relationship   ·   Dashed: host peering</text>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+# Synthetic record only. This is not Apache configuration.
+example_only: true
+entry_role: example-entry
+proxy_technology: example-proxy
+backend_role: example-application
+transport: unknown
+exposure_class: unknown
+tls_termination: unknown
+verification_status: unverified-example

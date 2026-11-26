@@ -1,0 +1,6 @@
+flowchart TB
+    O["Operator"] -->|manual deployment| C["Docker Compose"]
+    C -->|applies stack definition| E["Docker Engine"]
+    E -->|runs| A["Application containers"]
+    A ---|connectivity pattern| N["Bridge network"]
+    A ---|persistence pattern| V["Named volume"]

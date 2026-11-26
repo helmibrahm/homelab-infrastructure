@@ -1,0 +1,12 @@
+# Synthetic inventory template. This is not a Docker Compose file.
+example_only: true
+host_role: example-host
+project_alias: example-project
+membership_evidence: unverified-example
+services:
+  - alias: example-service
+    category: example-workload
+    image_family: unknown
+    state: unknown
+    persistent_state: unknown
+    management_exposure: unknown
